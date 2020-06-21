@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link rel="shortcut icon" type="image/png" href="/images/UHMM.ico">
+        <meta content="RustyKitties" property="og:title">
+        <meta content="rustykitties rust server website" property="og:description">
+        <meta content="https://rustykitties.com/" property="og:url">
+        <meta content="https://imgur.com/LUnFWto.png" property="og:image">
+        <meta content="#fccff5" data-react-helmet="true" name="theme-color">
+        <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <link rel="stylesheet" type="text/css" href="/subpages/shop.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-compatible" content="ie=edge">
+        <script src="https://kit.fontawesome.com/yourcode.js"></script>
+        <title>rustykitties</title>
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="header-title responsive1">RustyKitties</div>
+            <div class="header-title responsive2">RK</div>
+            <i onclick="navControl()" class="fas fa-bars"></i>
+            <div class="navigation-bar" id="navBar">
+                <a href="/index.html">Home</a>
+                <a href="/subpages/shop.html" class="currentPage">Store</a>
+                <a href="https://discord.gg/SXH6Dwj" target="_blank">Join us!</a>
+            </div>
+        </header>
+        <div class="main-page">
+            <img src="/images/secondimage.png" alt="pubg" class="mainimage" id="mainimageuwu">
+        </div>
+        <div class="buy-page" style="display: none;">
+            <div class="buy1 buy-pages" style="display: none;">
+                <button onmouseout="circleAnimation(0)" onmouseover="circleAnimation(100)" onclick="closeStore()" style="float: right;">
+                    <i class="fas fa-times"></i>
+                </button>
+                <svg style="float: right;">
+                    <circle cx="70" xy="70" r=70></circle>
+                    <circle cx="70" xy="70" r=70></circle>
+                </svg>
+                <div class="shopcontainers">
+
+                </div>
+            </div>
+            <div class="buy2 buy-pages" style="display: none;">
+                <button onmouseout="circleAnimation(0)" onmouseover="circleAnimation(100)" onclick="closeStore()" style="float: right;">
+                    <i class="fas fa-times"></i>
+                </button>
+                <svg style="float: right;">
+                    <circle cx="70" xy="70" r=70></circle>
+                    <circle cx="70" xy="70" r=70></circle>
+                </svg>
+            </div>
+            <div class="buy3 buy-pages" style="display: none;">
+                <button onmouseout="circleAnimation(0)" onmouseover="circleAnimation(100)" onclick="closeStore()" style="float: right;">
+                    <i class="fas fa-times"></i>
+                </button>
+                <svg style="float: right;">
+                    <circle cx="70" xy="70" r=70></circle>
+                    <circle cx="70" xy="70" r=70></circle>
+                </svg>
+            </div>
+            <div onclick="closeStore()" class="clickOut"></div>
+        </div>
+        <div class="actualpageok">
+            <div class="kit-boxes">
+                <div class="features-list">
+                    <span class="show">Features</span>
+                    <span class="hide">Perks</span>
+                </div>
+                <div class="features-list">
+                    <span class="show">Leopard kit</span>
+                    <span class="hide">LK</span>
+                    <hr>
+                    <div class="price">
+                      <p>$8.99 / week</p>
+                      <p>$31.99 / month <span>save 10%</span></p>
+                    </div>
+                    <div onclick="openStore(1)" class="buy-button">
+                        Buy 
+                        <i class="fas fa-caret-right"></i>
+                    </div>
+                </div>
+                <div class="features-list">
+                    <span class="show">Lion kit</span>
+                    <span class="hide">LK</span>
+                    <hr>
+                    <div class="price">
+                      <p>$13.99 / week</p>
+                      <p>$46.99 / month <span>save 15%</span></p>
+                    </div>
+                    <div onclick="openStore(2)" class="buy-button">
+                        Buy 
+                        <i class="fas fa-caret-right"></i>
+                    </div>
+                </div>
+                <div class="features-list">
+                    <span class="show">Tiger kit</span>
+                    <span class="hide">TK</span>
+                    <hr>
+                    <div class="price">
+                      <p>$19.99 / week</p>
+                      <p>$62.99 / month <span class="best">save 20%</span></p>
+                    </div>
+                    <div onclick="openStore(3)" class="buy-button">
+                        Buy 
+                        <i class="fas fa-caret-right"></i>
+                    </div>
+                </div>
+                <table class="perks" cellpaadding="0" cellspacing="0">
+                    <tr>
+                        <td class="first"><i class="fas fa-user-tie" style="margin-right: 5px;"></i>Armor</td>
+                        <td>Wood Armor <br> Shirt, Pants and Regular Shoes</td>
+                        <td>Street Sign Armor <br> Camo: Hoodie Pants Shoes Street sign gloves <br> Riot Helment</td>                 
+                        <td>Metal Facemask Metal Facechest Camouflaged
+                            Military Gloves <br> Roadsign Skirt Black, Black Pants, shirt</td>
+                    </tr>
+                    <tr>
+                        <td class="first"><i class="fas fa-bomb" style="margin-right: 4px"></i>Weapons</td>
+                        <td>Semi Rifle, 8x, Supressor, Laser, SMG, Flashlight And Holosight.</td>
+                        <td>Ak: Holopoint, Supressor, Flashlight. <br>  Bolty: 8x Supressor, Laser. <br> 1x Rocket Launcher</td>
+                        <td>LR96: 16x Supressor, Laser <br>
+                            LR300 Holopoint, Flashlight, Supressor <br>
+                            1 RL
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first"><i class="fas fa-archive" style="margin-right: 5px;"></i>Ammo</td>
+                        <td>250x Regular Rifle Ammo <br>
+                            250x Pistol Ammo</td>
+                        <td>500x Incendiary 556 <br>
+                            10x HV Rockets
+                        </td>
+                        <td>10x Rockets <br>
+                            10x HV Rockets <br>
+                            1k Explosive 556</td>
+                    </tr>
+                    <tr>
+                        <td class="first"><i class="fas fa-band-aid" style="margin-right: 5px"></i>Healing</td>
+                        <td>100x Berries <br>
+                            5x Medkits <br>
+                            10x Medical Syringes</td>
+                        <td>250x Berries <br>
+                            10x Medkits <br>
+                            30x Medipens
+                        </td>
+                        <td>500x Berries <br>
+                            100x Epipens <br>
+                            25x medkits
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first"><i class="fas fa-home" style="margin-right: 5px;"></i>Resources</td>
+                        <td>10k Wood <br>
+                            35k Stone <br>
+                            20k metal frags <br>
+                            3k HQM
+                        </td>
+                        <td>50k Wood <br>
+                            75k Stone <br>
+                            45k Metal frags <br>
+                            10k HQM <br>
+                            5K GP <br>
+                            10K Sulfur
+                        </td>
+                        <td>75k Wood <br>
+                            140k Stone  <br>
+                            100k Metal frags  <br>
+                            15k HQM <br>
+                            10k GP <br>
+                            30k sulfur
+                        </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+        </div>
+        <script src="/index.js"></script>
+    </body>
+</html>

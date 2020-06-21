@@ -1,0 +1,287 @@
+:root {
+    --main-color: #222831;
+    --second-color: #393e46;
+    --third-color: #007980;
+    --shop-color: #272c33;
+    --shop-color-2: #2a2e35;
+    --buy-button: #373c44;
+}
+
+/*yes yes*/
+
+.shopcontainers {
+    width: 100%;
+    height: 100%;
+    background: none;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*animation uwuwuwuwu&*/
+
+svg {
+    position: relative;
+    width: 49px;
+    height: 48px;
+    z-index: 90;
+    margin: 10px;
+    background: none;
+}
+
+svg circle {
+    width: 100px;
+    height: 100px;
+    fill: none;
+    stroke: transparent;
+    stroke-width: 15;
+    stroke-linecap: round;
+    transform: scale(.25) translate(26px, 95px);
+}
+
+svg i {
+    position: absolute;
+    transform: translate(50px, 20px);
+}
+
+svg circle:nth-child(1) {
+    stroke: rgba(255, 255, 255, 0.158);
+
+}
+
+svg circle:nth-child(2) {
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    stroke: rgb(255, 102, 102);
+    transition: stroke-dashoffset .5s ease;
+    cursor: pointer;
+}
+
+
+/*shop*/
+
+.buy-page {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.616);
+}
+
+.buy-pages {
+    width: 40%;
+    height: 400px;
+    margin-left: 30%;
+    background: var(--main-color);
+    margin-top: 20rem;
+    border-radius: 20px;
+    position: fixed;
+    z-index: 100;
+}
+
+.buy-pages button {
+    z-index: 1000;
+    color: rgba(255, 255, 255, 0.425);
+    border: none!important;
+    background: transparent;
+    font-size: 25px;
+    transform: translate(0.5px,0px);
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    right: 0;
+    transition: all .2s ease;
+}
+.buy-pages button:hover .fa-times {
+    color: rgb(255, 102, 102);
+    transform: rotate(360deg);
+}
+
+.buy-pages button .fa-times {
+    transition: all .5s ease;
+}
+
+.clickOut {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 3;
+}
+
+.kit-boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 20px;
+    height: auto;
+    border-radius: 10px;
+    background: var(--main-color);
+}
+
+.features-list {
+    background: var(--shop-color-2);
+    font-family: myFont;
+    color: white;
+    font-size: 50px;
+    padding: 10px;
+}
+
+.features-list {
+    width: auto;
+    width: 20rem;
+    margin-left: 4px;
+    margin-right: 4px;
+    height: fit-content;
+    text-align: center;
+    margin-top: 10px; 
+}
+
+.features-list hr {
+    padding: 0;
+    margin: 0;
+    background: var(--main-color);
+    opacity: .3;
+}
+
+.buy-button {
+    background: var(--buy-button);
+    filter: brightness(1.2);
+    font-size: 20px;
+    padding: 10px;
+    font-family: sans-serif;
+    border-radius: 4px;
+    transition: filter .1s ease;
+    cursor: pointer;
+}
+
+.buy-button:hover {
+    filter: brightness(1.1);
+}
+
+.buy-button:active {
+    filter: brightness(1);
+}
+
+.features-list .price {
+    justify-content: left;
+    font-size: 15px;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.fa-caret-right {
+    font-size: 15px;
+}
+
+.features-list:nth-of-type(1) {
+    margin-top: 134px;
+}
+
+.perks {
+    background: var(--shop-color-2);
+    position: absolute;
+    width: 84rem;
+    margin-top: 220px;
+    text-align: center;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.075);
+}
+
+.perks tr:nth-of-type(odd) {
+    background: var(--shop-color);
+}
+
+.perks tr td {
+    font-family: Arial;
+    color: rgba(255, 255, 255, 0.767);
+    width: 16.8rem;
+    padding: 10px;
+}
+
+.first {
+    color: white!important;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.hide {
+    display: none;
+}
+
+.price span {   
+    color: rgba(0, 128, 0, 0.678);
+    position: absolute;
+    transform: rotate(8deg);
+    padding: 1px;
+    font-size: 12px;
+    top: 145px;
+    margin: -4px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.price span.best {   
+    color: rgba(9, 202, 9, 0.726);
+}
+
+.price span {   
+    animation: prices 2s ease infinite;
+}
+
+@keyframes prices {
+    0%{
+        transform: scale(1.05) rotate(8deg);
+    }
+    50%{
+        transform: scale(1) rotate(6deg);
+    }
+    100%{
+        transform: scale(1.05) rotate(8deg);
+    }
+}
+@media only screen and (max-width: 1500px) {
+    .perks tr td {
+        width: 20rem;
+        padding: 10px;
+    } 
+    .perks {
+        position: absolute;
+        width: 60rem;
+        margin-top: 220px;
+    }
+    .hide {
+        display: block;
+    }
+    .show {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .perks tr td {
+        width: 20rem;
+        padding: 10px;
+    } 
+    .perks {
+        position: absolute;
+        width: 50rem;
+        margin-top: 220px;
+    } 
+}
+
+@media only screen and (max-width: 700px) {
+    .perks tr td {
+        width: 2rem;
+        padding: 10px;
+    } 
+    .perks {
+        position: absolute;
+        width: 20rem;
+        margin-top: 220px;
+    } 
+}
